@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+*.ipynb text diff=ipynb
+*.ipynb linguist-language=Python
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.parquet binary
