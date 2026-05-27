@@ -1,27 +1,21 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Data - never commit
+data/
+Data/
 
-# Ignore all JSON and Parquet files
-*.json
-*.parquet
-
-# Ignore files larger than 100MB (Note: Git doesn't support direct size-based ignoring, use Git hooks or Git LFS)
-*.bigfile
-maxsize=100MB
-
-# Ignore the Data/99.Backup/ folder and all its contents
-Data/99.Backup/
-
-# Do not ignore other folder structures
-!Data/
-!Data/0.Raw/
-!Data/1.EarlyCleaned/
-!Data/1.EarlyCleaned/cleaned_parquet/
-!Data/1.EarlyCleaned/raw_parquet/
-!Data/2.Processed/
-!Data/2.Processed/EDA/
-!Data/2.Processed/ModellingData/
-
-# Ignore Python cache files
+# Python
 __pycache__/
 *.pyc
+*.pyo
+.env
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.key
+progress.json
