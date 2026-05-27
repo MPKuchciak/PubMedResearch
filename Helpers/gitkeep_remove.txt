@@ -1,2 +1,0 @@
-# commands for removal of gitkeep files that are made to keep correct folders order and hierarchy
-del Data\0.Raw\.gitkeep Data\1.EarlyCleaned\.gitkeep Data\1.EarlyCleaned\cleaned_parquet\.gitkeep Data\1.EarlyCleaned\raw_parquet\.gitkeep Data\2.Processed\.gitkeep Data\2.Processed\EDA\.gitkeep Data\2.Processed\ModellingData\.gitkeep
