@@ -23,3 +23,10 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Secrets
+.env
+*.env
+
+# nbstripout (optional - only if not using the git hook)
+# .nbstripout
