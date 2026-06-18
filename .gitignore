@@ -8,8 +8,14 @@ data/**
 !data/**/.gitkeep
 Data/99.Backup/
 
+# Archive folder – ignore everything inside it
+data/archive/**
+data/Archive/**
+**/archive/**
+**/Archive/**
+
 # Data files
-*.json
+*.json 
 *.parquet
 
 # Python
