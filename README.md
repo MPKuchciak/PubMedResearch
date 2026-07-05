@@ -61,8 +61,6 @@ biomedical-literature-analysis/
 │   ├── 2_clean/                        clean_*.parquet (corpus used by 03 to 11)
 │   ├── 3_entities/                     entity tables, timelines, co-occurrence (09)
 │   └── 4_topics/                       LDA model, topic tables, timelines (11)
-├── environment-pubmed.yml
-├── environment-ner.yml
 └── README.md
 ```
 
