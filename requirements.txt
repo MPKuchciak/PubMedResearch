@@ -1,0 +1,40 @@
+# Install:  pip install -r requirements.txt
+# Python 3.12. For exact pinned versions, regenerate with:
+#   pip list --format=freeze > requirements.txt
+
+# Core data pipeline (notebooks 00-02)
+requests
+python-dotenv
+pandas
+pyarrow
+numpy
+tqdm
+
+# Analysis and plotting (notebooks 03-07, 10)
+matplotlib
+seaborn
+scikit-learn
+scipy
+networkx
+python-louvain
+
+# Entity extraction (notebooks 08-09)
+spacy
+scispacy
+# scispaCy disease/chemical model is NOT on PyPI. Install separately, matching
+# your scispacy version (check with: pip show scispacy):
+#   pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
+
+# Topic modeling (notebook 11)
+gensim
+joblib
+
+# Jupyter
+ipykernel
+ipywidgets
+nbformat
+
+# Optional: embedding-based topics + interactive map (notebook 11)
+# bertopic
+# sentence-transformers
+# pyldavis
