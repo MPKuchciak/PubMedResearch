@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+title: "Biomedical Literature Analysis: PubMed Corpus Pipeline"
+abstract: >-
+  A reproducible pipeline that harvests, verifies, and cleans US-affiliated
+  PubMed abstracts (1994-2025) and analyses them for disease and chemical
+  trends, MeSH and keyword structure, co-authorship networks, the COVID-19
+  publishing shock, and latent topics.
+type: software
+authors:
+  - family-names: Kuchciak
+    given-names: Maciej
+  - family-names: Pliszka
+    given-names: Mateusz
+  - family-names: Janisiów
+    given-names: Łukasz
+keywords:
+  - pubmed
+  - bibliometrics
+  - nlp
+  - named-entity-recognition
+  - topic-modeling
+  - co-authorship-network
+license: MIT
+repository-code: "https://github.com/MPKuchciak/biomedical-literature-analysis"
+date-released: 2026-01-01
