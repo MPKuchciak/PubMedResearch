@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
-[![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/USERNAME/DATASET-SLUG)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/mpkuchciak/pubmedabstracts)
 
 A reproducible pipeline that harvests biomedical journal abstracts from PubMed, verifies them against the source, cleans them into a columnar dataset, and analyses three decades of the literature: its diseases and chemicals, its MeSH and keyword structure, its co-authorship networks, the COVID-19 shock, and its latent topics.
 
