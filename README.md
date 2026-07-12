@@ -27,6 +27,12 @@ Harvest and preparation (00 to 02) produce the clean corpus. Analysis (03 to 11)
 
 The two record counts are different stages, not a discrepancy: roughly 4.26 million raw records are harvested, then deduplication and dropping of empty or duplicate-content rows yields the 3,063,120-record corpus used for all downstream analysis.
 
+## Data availability
+
+The cleaned corpus is published as a dataset on Kaggle: [PubMed Abstracts](https://www.kaggle.com/datasets/mpkuchciak/pubmedabstracts).
+
+This repository does not commit the data (see `.gitignore`). Either run the pipeline to regenerate it, or download the snapshot from Kaggle. Bibliographic metadata is provided by NLM without use restrictions; abstract text carries the original publishers' copyright, so the dataset is shared for non-commercial research and text mining only, with PubMed/NLM as the source.
+
 ### Query
 
 ```
