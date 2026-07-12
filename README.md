@@ -48,7 +48,7 @@ No disease-term pre-filtering is applied; disease and topic detection are left t
 ## Directory layout
 
 ```
-biomedical-literature-analysis/
+**biomedical-literature-analysis/
 ├── notebooks/
 │   ├── 00_api_data_gathering.ipynb     harvest PubMed to monthly JSONL
 │   ├── 01_verification.ipynb           validate the harvest (read-only)
@@ -71,7 +71,7 @@ biomedical-literature-analysis/
 │   ├── 2_clean/                        clean_*.parquet (corpus used by 03 to 11)
 │   ├── 3_entities/                     entity tables, timelines, co-occurrence (09)
 │   └── 4_topics/                       LDA model, topic tables, timelines (11)
-└── README.md
+└── README.md**
 ```
 
 Paths are resolved from each notebook's location, so notebooks run whether Jupyter starts in `notebooks/` or at the project root. The `data/` directory is gitignored (only folder structure is kept via `.gitkeep`); raw and derived data files are not committed.
