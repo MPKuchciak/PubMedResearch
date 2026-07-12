@@ -199,17 +199,32 @@ Moves from entities to themes. Fits Latent Dirichlet Allocation over the abstrac
 
 ## Environment
 
-Two conda environments, kept separate so the heavy NLP stack does not bloat the data-gathering environment:
-
-- **`pubmed`** for harvesting and cleaning (notebooks 00 to 02): `requests`, `pyarrow`, `pandas`, `matplotlib`, `tqdm`.
-- **`ner`** for abstract-text work (notebooks 08 to 11): scispaCy and the `en_ner_bc5cdr_md` model, scikit-learn, gensim, networkx, pandas, seaborn, and optionally BERTopic and sentence-transformers.
-
-Recreate them from the environment files:
+Python 3.12. Install the base dependencies with pip:
 
 ```bash
-conda env create -f environment-pubmed.yml
-conda env create -f environment-ner.yml
+python -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 ```
+
+That covers the harvest, cleaning, and analysis notebooks (00 to 07, 10). The abstract-text notebooks need two extra installs.
+
+**Entity extraction (notebooks 08 and 09) needs the scispaCy model.** It is not on PyPI, so pip cannot resolve it by name; install it from its release URL, matching the scispaCy version pip installed (check with `pip show scispacy`):
+
+```bash
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
+```
+
+Without it, notebooks 08 and 09 skip the model pass and fall back to the dictionary method, which still runs on the full corpus.
+
+**GPU is optional.** The scispaCy NER pass (notebook 09) runs far faster on GPU via CuPy, and the BERTopic comparison (notebook 11) uses a CUDA build of PyTorch for its embedding step. Both fall back to CPU if the GPU stack is absent, and the LDA topic model is CPU-only by design (scikit-learn has no GPU path). Install these only if you want the GPU routes:
+
+```bash
+pip install cupy-cuda12x                                        # match your CUDA version
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+**Optional extras for notebook 11:** `bertopic` and `sentence-transformers` for the embedding-based topic comparison, `pyldavis` for the interactive topic map. Both sections are gated off by default.
 
 Notebook outputs are kept in version control for the analysis notebooks via a `keep_output` flag so figures and tables render on GitHub; `nbstripout` strips outputs elsewhere to keep diffs clean.
 
