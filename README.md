@@ -225,10 +225,10 @@ Each step is verifiable. Notebook 01 prints exact PubMed Advanced-Search strings
 
 ## Source and licensing
 
+**Code** in this repository is released under the MIT License (see [`LICENSE`](LICENSE)). This covers the notebooks and the helpers in `src/`, not the data.
+
 Source: PubMed / MEDLINE, U.S. National Library of Medicine (NLM), via the E-utilities API. Courtesy of the U.S. National Library of Medicine.
 
 Bibliographic metadata (PMIDs, titles, authors, affiliations, MeSH terms, dates) is provided by NLM without use restrictions. Abstract text may be protected by the original authors' or publishers' copyright; NLM does not claim and does not hold this copyright. Any redistribution of abstract text is the redistributor's responsibility to clear, and should carry appropriate license terms and a disclaimer. This corpus is intended for non-commercial research and text mining. This document is not legal advice.
-
-**Code** in this repository is released under the MIT License (see [`LICENSE`](LICENSE)). This covers the notebooks and the helpers in `src/`, not the data.
 
 Datasets built from this pipeline are static snapshots and do not reflect the most current data available from NLM; query PubMed directly for up-to-date records. Not affiliated with or endorsed by NLM/NIH/HHS.
